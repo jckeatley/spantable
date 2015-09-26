@@ -26,7 +26,7 @@ public class SpanTableUI extends BasicTableUI {
 	public void paint(Graphics g, JComponent c) {
 		Rectangle r = g.getClipBounds();
 		int firstRow = table.rowAtPoint(new Point(r.x, r.y));
-		int lastRow = table.rowAtPoint(new Point(r.x, r.y + r.height));
+		int lastRow = table.rowAtPoint(new Point(r.x + r.width, r.y + r.height));
 		// -1 is a flag that the ending point is outside the table:
 		if (lastRow < 0)
 			lastRow = table.getRowCount() - 1;
