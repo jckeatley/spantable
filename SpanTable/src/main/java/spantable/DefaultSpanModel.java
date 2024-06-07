@@ -28,12 +28,12 @@ public class DefaultSpanModel implements SpanModel {
     /**
      *  Set of span definitions.
      */
-	private Set<Span> spans = new HashSet<Span>();
+	private Set<Span> spans = new HashSet<>();
 
     /**
      * The listeners for SpanEvents.
      */
-    private List<SpanListener> listeners = new ArrayList<SpanListener>();
+    private List<SpanListener> listeners = new ArrayList<>();
 
     public DefaultSpanModel() {
     }
@@ -98,9 +98,7 @@ public class DefaultSpanModel implements SpanModel {
 	 * @return The list of all spans in the model.
 	 */
     public List<Span> getSpans() {
-    	List<Span> rval = new ArrayList<Span>();
-    	rval.addAll(spans);
-		return rval;
+        return new ArrayList<>(spans);
 	}
 
 	/**
